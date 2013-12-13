@@ -39,6 +39,12 @@ LOCAL_SHARED_LIBRARIES := \
 	libutils \
 	liblog
 
+#ifdef STE_HARDWARE
+LOCAL_SHARED_LIBRARIES += \
+       libhardware \
+       libhardware_legacy
+#endif
+
 
 LOCAL_MODULE:= libgui
 

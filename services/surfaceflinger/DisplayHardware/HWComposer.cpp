@@ -493,7 +493,8 @@ void HWComposer::eventControl(int disp, int event, int enabled) {
         const int32_t oldValue = mDisplayData[disp].events & eventBit;
         if (newValue != oldValue) {
             ATRACE_CALL();
-            err = mHwc->eventControl(mHwc, disp, event, enabled);
+            if (hwcHasApiVersion(mHwc, HWC_DEVICE_API_VERSION_1_0))
+                err = mHwc->eventControl(mHwc, disp, event, enabled);
             if (!err) {
                 int32_t& events(mDisplayData[disp].events);
                 events = (events & ~eventBit) | newValue;
