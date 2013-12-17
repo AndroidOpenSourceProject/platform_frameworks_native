@@ -677,8 +677,7 @@ status_t ScreenshotClient::capture(
     sp<ISurfaceComposer> s(ComposerService::getComposerService());
     if (s == NULL) return NO_INIT;
     return s->captureScreen(display, producer,
-            reqWidth, reqHeight, minLayerZ, maxLayerZ,
-            SS_CPU_CONSUMER);
+            reqWidth, reqHeight, minLayerZ, maxLayerZ);
 }
 
 ScreenshotClient::ScreenshotClient()

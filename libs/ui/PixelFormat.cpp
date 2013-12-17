@@ -21,7 +21,7 @@
 namespace android {
 // ----------------------------------------------------------------------------
 
-
+#ifdef HAVE_PIXEL_FORMAT_INFO
 static const int COMPONENT_YUV = 0xFF;
 
 struct Info {
@@ -142,7 +142,7 @@ status_t getPixelFormatInfo(PixelFormat format, PixelFormatInfo* info)
 
     return NO_ERROR;
 }
-
+#endif
 
 ssize_t bytesPerPixel(PixelFormat format) {
     switch (format) {

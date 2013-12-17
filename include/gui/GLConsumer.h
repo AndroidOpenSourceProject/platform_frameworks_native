@@ -31,7 +31,7 @@
 #include <utils/threads.h>
 
 #ifdef STE_HARDWARE
-#include <hardware/copybit.h>
+#include <ui/copybit.h>
 #include <gui/IGraphicBufferAlloc.h>
 #endif
 

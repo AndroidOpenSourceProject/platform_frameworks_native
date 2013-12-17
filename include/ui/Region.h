@@ -26,7 +26,7 @@
 #include <utils/Flattenable.h>
 
 #ifdef STE_HARDWARE
-#include <hardware/copybit.h>
+#include <ui/copybit.h>
 #endif
 
 namespace android {
